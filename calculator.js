@@ -24,10 +24,12 @@ class Calculator {
     this.validateFn = validateFn;
     this.validateFn(this.num1, this.num2);
   }
+
   set setX(value) {
     this.num1 = value;
     this.validateFn(this.num1, this.num2);
   }
+
   set setY(value) {
     this.num2 = value;
     this.validateFn(this.num1, this.num2);
@@ -44,6 +46,7 @@ class Calculator {
   logSub = () => {
     return this.num1 - this.num2;
   };
+
   logDiv = () => {
     if (this.num2 === 0) {
       throw new Error('Divider should be greater than zero');
